@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* http://meyerweb.com/eric/tools/css/reset/ 
+        v2.0 | 20110126
+        License: none (public domain)
+        */
+
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed, 
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure, 
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        body{
+            background-color: cornflowerblue;
+        }
+
+        #billboard{
+            width: 96vw;
+            max-width: 960px;
+            margin: 0 auto;
+            max-width: 96vw;
+        }
+
+        #billboard img{
+            width: 33vw;
+            height: 33vw;
+        }
+
+        @media (orientation: portrait){
+            #billboard img{
+                width: 100vw;
+                height: 100vw;
+            }
+        }
+
+    </style>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+</head>
+<body>
+
+    <div id="billboard">
+        <div><img src="https://picsum.photos/1080/1080?random=1"></div>
+        <div><img src="https://picsum.photos/1080/1080?random=2"></div>
+        <div><img src="https://picsum.photos/1080/1080?random=3"></div>
+        <div><img src="https://picsum.photos/1080/1080?random=4"></div>
+        <div><img src="https://picsum.photos/1080/1080?random=5"></div>
+        <div><img src="https://picsum.photos/1080/1080?random=6"></div>
+        <div><img src="https://picsum.photos/1080/1080?random=7"></div>
+    </div>
+
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            const vw = document.documentElement.clientWidth;
+            const vh = document.documentElement.clientHeight;
+            const slidesNumber = (vw < vh) ? 1 : 3;
+
+            $('#billboard').slick({
+                accessibility: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                slidesToShow: slidesNumber,
+                slidesToScroll: 1,
+                lazyLoad: 'ondemand',
+            });
+        });
+    </script>
+
+</body>
+</html>
