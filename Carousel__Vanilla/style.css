@@ -1,0 +1,41 @@
+.carousel .carousel__items{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: absolute;
+    width: 90vw;
+    height: 30vw;
+    left: 5vw;
+    margin: 0 auto;
+    overflow: scroll;
+}
+
+.carousel .carousel__prev,
+.carousel .carousel__next
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    position: absolute;
+    cursor: pointer;
+    width: 5vw;
+    height: 30vw;
+    background-color: cadetblue;
+    font-size: 2vw;
+}
+
+.carousel .carousel__prev{
+    left: 0;
+}
+
+.carousel .carousel__next{
+    right: 0;
+}
+
+.carousel .carousel__items img{
+    width: 30vw;
+    width: 30vw;
+    flex-grow: 1;
+}
